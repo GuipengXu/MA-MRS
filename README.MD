@@ -4,10 +4,11 @@
 
 ### Visualization experiments. 
 
-We perform visualization experiments on the Baby, Sports, and Clothing datasets using LightGCN and DA-MRS+LightGCN.  **The visualization results are in the “./image” folder.**
+**The visualization results are in the “./image” folder.**
 
-1.  We first map the learned item representations to 2-dimensional normalized vectors on the unit hypersphere $S^1$ (i.e., circle with radius 1) by using t-SNE. All the representations are obtained when the methods reach their best performance. Then we plot the feature distributions with the nonparametric Gaussian kernel density estimation in $R^2$. For a clearer presentation, the density estimations on angles for each point on $S^1$ are also visualized. 
-2.  As shown in Figure, LightGCN shows highly clustered features that mainly reside on some narrow arcs, while DA-MRS has more uniform distributions, and the density estimation curves are less sharp. A more uniform representation distribution can preserve the intrinsic characteristics of nodes and improve the generalization ability [1]. This suggests that through DA-MRS, the model can learn *more comprehensive item representations, enhance generalization ability, and achieve better recommendation performance*.
+We visualize the item representations before (i.e., using LightGCN) and after denoising (i.e., using DA-MRS+LightGCN). Specifically, we first project the learned item representations to 2-dimensional normalized vectors on a unit sphere (i.e., a circle with radius 1) by using t-SNE. All the representations are obtained when the methods reach their best performance. Since all the projected representations are on the sphere, they only differ in the polar angle in a polar coordinate system. Then, we plot the distribution of polar angles with the nonparametric Gaussian kernel density estimation [1]. 
+
+As shown in the Figures, item representations obtained from LightGCN are clustered, and the polar angles mainly reside in some regions. After denoising, item representations from DA-MRS are more evenly distributed on the sphere, and the density distribution of polar angles is more smooth. A more uniform representation distribution can improve the generalization ability [1]. This suggests that the model can learn more universally effective item representations through DA-MRS. As the ablation study in Section 4.4 shows, DA-MRS achieves better recommendation performance.
 
 ![Baby](./image/baby_cmp_distribution.jpg)
 
