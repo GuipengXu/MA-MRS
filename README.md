@@ -27,6 +27,8 @@ This repository contains our implementations for Denoising and Aligning Multi-mo
 - pyyaml==6.0
 - pyg==2.3.0
 - networkx==2.8.4
+- tqdm==4.65.0
+- lmdb==1.4.0
 
 
 

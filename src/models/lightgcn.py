@@ -292,7 +292,7 @@ class LightGCN(GeneralRecommender):
         user_embeddings, item_embeddings, h_t, h_v, h_s = self.forward() # 
 
         user_e = user_embeddings[user, :]
-        i_embedding = (h_v, h_t, h_s)/ 3.0
+        i_embedding = (h_v+ h_t+ h_s)/ 3.0
         all_item_e = item_embeddings + i_embedding 
         score = torch.matmul(user_e, all_item_e.transpose(0, 1))
         return score
