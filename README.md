@@ -95,7 +95,7 @@ This repository contains our implementations for Denoising and Aligning Multi-mo
    3. gpu_id: str type, the specified GPU. 
 
 
-***We provide the log files of DA-MRS+LightGCN, DA-MRS+MFBPR, DA-MRS+VBPR, and all baselines on Amazon Baby, Sports, and Clothing datasets in the './logfiles/main_results_log/' folder to help reproduce the results more quickly.***
+***We provide the log files of DA-MRS+LightGCN, DA-MRS+MFBPR, DA-MRS+VBPR, and all baselines on Amazon Baby, Sports, and Clothing datasets in the './log_files/main_results_log/' folder to help reproduce the results more quickly.***
 
 
 
@@ -216,7 +216,7 @@ Figure 3: The visualization experiment on clothing dataset.
 
       
 
-5. **We provide the logs of DA-MRS+LightGCN and LightGCN in the './logfiles/cold_start_log' folder.** 
+5. **We provide the logs of DA-MRS+LightGCN and LightGCN in the './log_files/cold_start_log' folder.** 
 
    - DA-MRS+LightGCN-baby-Dec-10-2023-17-46-27.log: The results of the *active user group* and *the less active user group*. 
    - DA-MRS+LightGCN-baby-Dec-10-2023-18-18-27.log: The results of the *active user group* and the *new user group*. 
@@ -225,15 +225,15 @@ Figure 3: The visualization experiment on clothing dataset.
 
 6. To verify the impact of DA-MRS on new users, we divide the users in the Baby dataset into multiple groups and test the results in the active user group (with more than 50 interactions), less active user group (with less than 10 interactions), and new user group (with 5 interactions, note that the dataset is 5-core). There are a total of 27 active users, 15,063 less active users, and 5,998 new users. We use R@20, P@20, and N@20 as metrics to evaluate LightGCN and DA-MRS+LightGCN. We plot the results on baby datasets in Figure 4-6. 
 
-<img src="./src_cold_start/image/R20.jpg" alt="Baby" style="zoom: 100%;" />
+<img src="./src_cold_start/image/R20.jpg" alt="Baby" style="zoom: 25%;" />
 
 Figure 4: The Recall@20 on different user groups. 
 
-<img src="./src_cold_start/image/P20.jpg" alt="sports" style="zoom: 100%;" />
+<img src="./src_cold_start/image/P20.jpg" alt="sports" style="zoom: 25%;" />
 
 Figure 5: The Precision@20 on different user groups. 
 
-<img src="./src_cold_start/image/N20.jpg" alt="Clothing" style="zoom: 100%;" />
+<img src="./src_cold_start/image/N20.jpg" alt="Clothing" style="zoom: 25%;" />
 
 Figure 6: The NDCG@20 on different user groups. 
 
@@ -310,7 +310,7 @@ Figure 6: The NDCG@20 on different user groups.
 
       
 
-5. **We provide the logs of DA-MRS+LightGCN and other baselines in the './logfiles/main_results_log/tiktok' folder.** 
+5. **We provide the logs of DA-MRS+LightGCN and other baselines in the './log_files/main_results_log/tiktok' folder.** 
 
 
 
@@ -403,14 +403,12 @@ Figure 6: The NDCG@20 on different user groups.
 
 **By modifying the corresponding model parameters, experiments can be conducted. The experimental steps are consistent with the main experiment. We provide the running logs of all experiments.**
 
-- ./log_files/ablation_log: Running logs of the **ablation studies** on the Baby, Sports and Clothing dataset. 
+- ./log_files/Ablation_log: Running logs of the **ablation studies** on the Baby, Sports and Clothing dataset. 
 - ./log_files/CL_experiment_log:  Running logs of the experiments that investigate the effects of **different strategies to select positive and negative samples** on the Baby dataset. 
 - ./log_files/IIB_experiment_log: Running logs of the experiments that investigate the effects of **different interaction deletion threshold** on the Baby dataset. 
 - ./log_files/KNN_parameter_log: Running logs of the experiments in Appendix A.4.1, which investigates the effects of the **number of k in DIIG.** 
 - ./log_files/Loss_ai_parameter_log: Running logs of the experiments in Appendix A.4.3, which investigates the effects of **weight of** $L_{AI}$. 
 - ./log_files/Loss_au_parameter_log: Running logs of the experiments in Appendix A.4.2, which investigates the effects of **weight of** $L_{AU}$. 
-- ./log_file/cold_start_log: Running logs of the experiments that investigates the impact of DA-MRS on **cold-start users**.
-- ./log_file/main_results_log: Running logs of the main experiments in Section 4.2 which compare the **performance** of DA-MRS with various baselines.
 
 
 ### Acknowledgement
