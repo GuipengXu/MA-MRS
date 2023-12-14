@@ -225,15 +225,15 @@ Figure 3: The visualization experiment on clothing dataset.
 
 6. To verify the impact of DA-MRS on new users, we divide the users in the Baby dataset into multiple groups and test the results in the active user group (with more than 50 interactions), less active user group (with less than 10 interactions), and new user group (with 5 interactions, note that the dataset is 5-core). There are a total of 27 active users, 15,063 less active users, and 5,998 new users. We use R@20, P@20, and N@20 as metrics to evaluate LightGCN and DA-MRS+LightGCN. We plot the results on baby datasets in Figure 4-6. 
 
-<img src="./src_cold_start/image/R20.jpg" alt="Baby" style="zoom: 25%;" />
+<img src="./src_cold_start/image/R20.jpg" alt="Baby" style="zoom: 30%;" />
 
 Figure 4: The Recall@20 on different user groups. 
 
-<img src="./src_cold_start/image/P20.jpg" alt="sports" style="zoom: 25%;" />
+<img src="./src_cold_start/image/P20.jpg" alt="sports" style="zoom: 30%;" />
 
 Figure 5: The Precision@20 on different user groups. 
 
-<img src="./src_cold_start/image/N20.jpg" alt="Clothing" style="zoom: 25%;" />
+<img src="./src_cold_start/image/N20.jpg" alt="Clothing" style="zoom: 30%;" />
 
 Figure 6: The NDCG@20 on different user groups. 
 
